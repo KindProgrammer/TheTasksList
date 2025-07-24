@@ -1,0 +1,17 @@
+.status-dropdown {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+
+    & .dropdown-select {
+            padding: 0.5rem 1rem;
+            border: 1px solid #ccc;
+            border-radius: 0.5rem;
+            outline: none;
+        }
+        
+    & .dropdown-select:focus {
+            border-color: #4285f4;
+            box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+        }
+}
