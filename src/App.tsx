@@ -1,7 +1,5 @@
 import './App.css'
 import TasksList from './components/TasksList/TasksList'
-// import AddTaskForm from './components/AddTaskForm/AddTaskForm'
-// import Filter from './components/Filter/Filter'
 import Controls from './components/Controls/Controls'
 import AddTaskModal from './components/AddTaskModal/AddTaskModal'
 import { isOpenedSelector } from './store/slices/modalSlice'
@@ -12,8 +10,6 @@ function App() {
 
   return (
     <>
-      {/* <AddTaskForm/>
-      <Filter/> */}
       <Controls />
       <TasksList/>
       { isOpen ? <AddTaskModal/> : null }

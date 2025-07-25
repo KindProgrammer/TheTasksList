@@ -11,9 +11,8 @@ body {
   margin: 0;
   padding: 1rem 0;
   min-width: 320px;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #f8f8ff;
-  overflow: hidden;
   box-sizing: border-box;
 }
 

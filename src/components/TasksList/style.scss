@@ -3,11 +3,13 @@
     flex-direction: column;
     gap: 1rem;
     width: 100%;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    scrollbar-width: none;
+    margin-top: calc(80px + 1rem);
 
     & .empty-list {
         text-align: center;
     }
+
+    @media (max-width: 768px) {
+        margin-top: calc(120px + 1rem);
+      }
 }

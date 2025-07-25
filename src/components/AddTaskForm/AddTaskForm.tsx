@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
 import { tasksSelector } from '../../store/slices/tasksSlice';
 import { addTask } from '../../store/slices/tasksSlice';
+import { closeModal } from '../../store/slices/modalSlice';
 
 const AddTaskForm = () => {
     const dispatch = useDispatch();
@@ -38,6 +39,7 @@ const AddTaskForm = () => {
         dispatch(addTask({id: title, title: title, description: description}));
         resetForm();
         setSubmitting(false);
+        dispatch(closeModal());
     }
     });
 
