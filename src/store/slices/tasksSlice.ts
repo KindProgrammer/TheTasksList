@@ -21,7 +21,7 @@ const tasksSlice = createSlice({
   initialState,
   reducers: {
     addTask: (state, action: PayloadAction<Omit<Task, 'status'>>) => {
-        state.list.push({
+        state.list.unshift({
           ...action.payload,
           status: 'pending'
         });

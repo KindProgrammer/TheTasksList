@@ -19,11 +19,11 @@ const Task = ({id, title, description, status}: TaskProps) => {
 
 
     return (
-        <div className='task'>
+        <div className={`task ${status}`}>
             <div className='title-container'>
-                <span className='title'>
+                <div className='title'>
                     {title}
-                </span>
+                </div>
                 <StatusDropdown id={id} status={status} />
             </div>
             <div className='description'>
