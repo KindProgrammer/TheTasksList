@@ -2,7 +2,6 @@
     background-color: white;
     padding: 2rem;
     border-radius: 1rem;
-    max-width: 500px;
     width: 100%;
     box-sizing: border-box;
 
@@ -57,7 +56,7 @@
 
         & .btn {
             color: white;
-            background-color: green;
+            background-color: #4CAF50;
             border-radius: 0.5rem;
             padding: 0.5rem 2rem;
         }
@@ -65,7 +64,6 @@
 
       // Планшеты (≤ 768px)
   @media (max-width: 768px) {
-
     & .title {
       font-size: 1.4rem;
     }
