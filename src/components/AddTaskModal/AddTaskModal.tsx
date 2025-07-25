@@ -4,29 +4,31 @@ import Cross from '../../assets/cross.svg?react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useDispatch } from 'react-redux';
 import { closeModal } from '../../store/slices/modalSlice';
+import { useState } from 'react';
 
 const AddTaskModal = () => {
+    const [isVisible, setIsVisible] = useState(true);
     const dispatch = useDispatch();
 
     const handleClose = () => {
-        dispatch(closeModal());
+        setIsVisible(false);
+        setTimeout(() => {dispatch(closeModal())}, 500)
     }
 
     return (
-        <AnimatePresence>
-            <motion.div 
+        <AnimatePresence mode='wait'>{
+            isVisible && (
+                <motion.div 
                 className="modal-container"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 0.2 }}
             >  
                 <motion.div 
                     className="modal"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 0.3 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
                 >
                     <motion.span 
                         className="cross-container"
@@ -44,6 +46,8 @@ const AddTaskModal = () => {
                     </div>
                 </motion.div>
             </motion.div>
+            )
+        }
         </AnimatePresence>
     );
 }

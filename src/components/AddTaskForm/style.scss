@@ -59,10 +59,14 @@
             background-color: #4CAF50;
             border-radius: 0.5rem;
             padding: 0.5rem 2rem;
+            transition: all 0.3s ease;
+        }
+
+        & .btn:hover {
+          background-color: #398d47;
         }
     }
 
-      // Планшеты (≤ 768px)
   @media (max-width: 768px) {
     & .title {
       font-size: 1.4rem;
@@ -78,7 +82,6 @@
     }
   }
 
-  // Мобильные (≤ 480px)
   @media (max-width: 480px) {
     padding: 1rem;
 

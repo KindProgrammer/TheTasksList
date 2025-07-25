@@ -26,11 +26,8 @@
       white-space: nowrap;
   
       &:hover {
-        transform: translateY(-1px);
-      }
-  
-      &:active {
-        transform: translateY(0);
+        background-color: #398d47;
+        transform: scale(1.05);
       }
     }
   

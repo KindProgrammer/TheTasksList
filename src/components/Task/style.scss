@@ -141,16 +141,13 @@
       font-weight: 500;
       cursor: pointer;
       transition: all 0.2s ease;
+      background: #EA4335;
+      color: white;
+    }
 
-      &.delete-btn {
-        background-color: #EA4335;
-        color: white;
-      }
-
-      &.complete-btn {
-        background-color: #34A853;
-        color: white;
-      }
+    & .btn:hover {
+      background: #bb2b26;
+      transform: scale(1.05);
     }
   }
 

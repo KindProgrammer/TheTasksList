@@ -12,7 +12,7 @@ function App() {
     <>
       <Controls />
       <TasksList/>
-      { isOpen ? <AddTaskModal/> : null }
+      { isOpen && <AddTaskModal/>}
     </>
   )
 }
