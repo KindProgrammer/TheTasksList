@@ -3,11 +3,12 @@ import { configureStore } from '@reduxjs/toolkit';
 import tasksReducer, { type TasksState } from './slices/tasksSlice';
 import filterReduser, { type FilterState } from './slices/filterSlice';
 import { localStorageMiddleware } from './middlewares/localStorageMiddleware';
-
+import modalReduser, { type ModalState } from './slices/modalSlice';
 
 interface RootState {
   tasks: TasksState;
   filter: FilterState;
+  modal: ModalState;
 }
 
 const loadState = (): RootState | undefined => {
@@ -31,6 +32,7 @@ export const store = configureStore({
   reducer: {
     tasks: tasksReducer,
     filter: filterReduser,
+    modal: modalReduser,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
